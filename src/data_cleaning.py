@@ -46,7 +46,7 @@ df3['Category'] = df3['Category'].fillna('Accessories')
 
 print("🔎 Current working directory:", os.getcwd())  # see where script is running
 os.makedirs("data/generated_output", exist_ok=True)  # create folder if missing
-os.chdir("Business_Analytics/data/generated_data")
+os.chdir("home/Business_Analytics/data/generated_data")
 print("🔎 Current working directory:", os.getcwd())
 # output_path = "Business_Analytics/data/generated_output/products_data.csv"
 df1.to_csv("products_clean.csv", index=False)
