@@ -1,0 +1,51 @@
+ProductID,ProductName,Category,Price
+1,Tablet,Gadgets,970.44
+2, Pro,Electronics,65.69
+3,Headphones Max,Electronics,174.22
+4,Monitor,Accessories,987.31
+5,Tablet Pro,Gadgets,1366.34
+6,Laptop Plus,Accessories,690.35
+7,,Gadgets,1328.97
+8,Headphones,Gadgets,1178.69
+9,Headphones,,569.31
+10,,Gadgets,1397.58
+11,Monitor Max,Electronics,635.1
+12,Tablet Max,,466.48
+13,,Gadgets,557.65
+14, Plus,Gadgets,1259.54
+15,Laptop,Gadgets,550.02
+16,,Accessories,192.16
+17,Tablet Plus,Accessories,
+18, Pro,Accessories,206.2
+19,Laptop Plus,Electronics,92.84
+20,Monitor,,841.16
+21, Plus,Gadgets,244.83
+22, Max,Electronics,1180.34
+23,Mobile,,362.29
+24, Pro,Electronics,939.08
+25,Laptop Plus,Electronics,1249.53
+26,Headphones Max,Accessories,415.77
+27, Plus,Accessories,384.95
+28, Plus,Accessories,1316.26
+29,Mobile,,1129.24
+30, Pro,Gadgets,135.51
+31, Max,Gadgets,475.67
+32,,Accessories,1067.93
+33,Headphones Pro,Accessories,1269.49
+34,Laptop,Gadgets,54.74
+35,Headphones,Electronics,467.44
+36,Tablet Plus,,297.62
+37,Tablet,Gadgets,1025.47
+38,Monitor,,719.66
+39,Headphones Pro,Accessories,860.61
+40,Monitor Pro,,1495.51
+41,Headphones Max,Accessories,500.75
+42,Monitor Max,,396.07
+43,,Accessories,1101.95
+44,Tablet,,134.0
+45,Monitor Plus,Electronics,605.16
+46,Mobile Plus,Accessories,1393.99
+47,Headphones,Electronics,1097.68
+48,Monitor Plus,Accessories,326.72
+49,Mobile,Electronics,1177.58
+50,Headphones Plus,Accessories,1203.65
