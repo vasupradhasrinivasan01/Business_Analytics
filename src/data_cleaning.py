@@ -44,7 +44,7 @@ df3 = df3[~df3['ProductName'].str.contains(r'Plus | Pro' ,case=False,na=False)]
 df3=df3.dropna(subset='Price')
 df3['Category'] = df3['Category'].fillna('Accessories')
 
-rint("🔎 Current working directory:", os.getcwd())  # see where script is running
+print("🔎 Current working directory:", os.getcwd())  # see where script is running
 os.makedirs("data/generated_output", exist_ok=True)  # create folder if missing
 
 output_path = "data/generated_output/products_data.csv"
