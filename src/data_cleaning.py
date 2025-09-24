@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 df1 = pd.read_csv(r"data/raw_Data/customers_raw_data.csv")
 
@@ -43,6 +44,7 @@ df3 = df3[~df3['ProductName'].str.contains(r'Plus | Pro' ,case=False,na=False)]
 df3=df3.dropna(subset='Price')
 df3['Category'] = df3['Category'].fillna('Accessories')
 
-df1.to_csv("data/generated_output/products_data.csv")
+os.makedirs("data/generated_output", exist_ok=True)
+df1.to_csv("data/generated_output/products_data.csv", index=False)
 df2.to_csv("data/generated_output/customers_clean_data.csv")
 df3.to_csv("data/generated_output/sales_clean_data.csv")
