@@ -43,4 +43,4 @@ df3=df3.dropna(subset='Price')
 df3['Category'] = df3['Category'].fillna('Accessories')
 # print(df3)
 
-df1.to_csv("C:\Users\vasup\Business_Analytics\data\generated_output\customers_clean_data.csv", index= False)
+df1.to_csv("generated_output\customers_clean_data.csv", index= False)
