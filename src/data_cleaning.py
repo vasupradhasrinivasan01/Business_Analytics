@@ -14,6 +14,7 @@ df1=df1.dropna(subset='Email')
 df1=df1[~df1['Name'].str.contains(r'Jr.|Sr.', case=False,na=False)]
 # print(df1)
 
+# Considering sales dataframe
 df2 = pd.read_csv(r"data/raw_Data/sales_raw_data.csv")
 
 df2.notnull()
@@ -41,4 +42,7 @@ df3 = df3.dropna(subset='ProductName')
 df3 = df3[~df3['ProductName'].str.contains(r'Plus | Pro' ,case=False,na=False)]
 df3=df3.dropna(subset='Price')
 df3['Category'] = df3['Category'].fillna('Accessories')
-print(df3)
+
+df1 = pd.to_csv("data/generated_output/products_data.csv")
+df2 = pd.to_csv("data/generated_output/customers_clean_data.csv")
+df3 = pd.to_csv("data/generated_output/sales_clean_data.csv")
