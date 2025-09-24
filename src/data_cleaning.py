@@ -44,7 +44,16 @@ df3 = df3[~df3['ProductName'].str.contains(r'Plus | Pro' ,case=False,na=False)]
 df3=df3.dropna(subset='Price')
 df3['Category'] = df3['Category'].fillna('Accessories')
 
-os.makedirs("data/generated_output", exist_ok=True)
-df1.to_csv("data/generated_output/products_data.csv", index=False)
-df2.to_csv("data/generated_output/customers_clean_data.csv")
-df3.to_csv("data/generated_output/sales_clean_data.csv")
+rint("🔎 Current working directory:", os.getcwd())  # see where script is running
+os.makedirs("data/generated_output", exist_ok=True)  # create folder if missing
+
+output_path = "data/generated_output/products_data.csv"
+df1.to_csv(output_path, index=False)
+
+print(f"✅ File saved at: {os.path.abspath(output_path)}")
+print("📂 Files in output folder:", os.listdir("data/generated_output"))
+
+# os.makedirs("data/generated_output", exist_ok=True)
+# df1.to_csv("data/generated_output/products_data.csv", index=False)
+# df2.to_csv("data/generated_output/customers_clean_data.csv")
+# df3.to_csv("data/generated_output/sales_clean_data.csv")
