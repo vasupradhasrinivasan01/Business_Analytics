@@ -1,6 +1,6 @@
 import pandas as pd
 
-df1 = pd.read_csv(r"Business_Analytics\data\raw_Data\customers_raw_data.csv")
+df1 = pd.read_csv(r"data\raw_Data\customers_raw_data.csv")
 
 df1.notnull()
 df1.dropna()
