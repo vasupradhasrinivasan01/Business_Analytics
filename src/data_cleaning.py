@@ -41,6 +41,4 @@ df3 = df3.dropna(subset='ProductName')
 df3 = df3[~df3['ProductName'].str.contains(r'Plus | Pro' ,case=False,na=False)]
 df3=df3.dropna(subset='Price')
 df3['Category'] = df3['Category'].fillna('Accessories')
-# print(df3)
-
-df1.to_csv("C:\Users\vasup\Business_Analytics\data\generated_output\customers_clean_data.csv", index= False)
+print(df3)
