@@ -1,6 +1,6 @@
 import pandas as pd
 
-df1 = pd.read_csv(r"C:\Users\vasup\Business_Analytics\data\raw_Data\customers_raw_data.csv")
+df1 = pd.read_csv(r"customers_raw_data.csv")
 
 df1.notnull()
 df1.dropna()
@@ -14,7 +14,7 @@ df1=df1.dropna(subset='Email')
 df1=df1[~df1['Name'].str.contains(r'Jr.|Sr.', case=False,na=False)]
 # print(df1)
 
-df2 = pd.read_csv(r"C:\Users\vasup\Business_Analytics\data\raw_Data\sales_raw_data.csv")
+df2 = pd.read_csv(r"sales_raw_data.csv")
 
 df2.notnull()
 df2.dropna()
@@ -31,7 +31,7 @@ df2['Only_Time'] = df2['SaleDate'].dt.time
 # print(df2)
 
 
-df3 = pd.read_csv(r"C:\Users\vasup\Business_Analytics\data\raw_Data\products_raw_data.csv")
+df3 = pd.read_csv(r"products_raw_data.csv")
 
 df3.notnull()
 df3.dropna()
