@@ -21,22 +21,18 @@ sales_df.to_sql("sales", conn, if_exists="replace", index=False)
 
 conn.commit()
 
+# Function to run query and save result along with query text
+def run_and_save_query(query, filename):
+    df = pd.read_sql(query, conn)
+    df['__Query__'] = query  # Add query text as a column (same for all rows)
+    df.to_csv(filename, index=False)
+    print(f"✅ Query result saved to {filename}")
+    return df
+
 # Example 1: Get first 10 customers
-query = "SELECT * FROM customers LIMIT 10;"
-customers_sample = pd.read_sql(query, conn)
-print(customers_sample)
-
-# # Example 2: Get all sales for a specific CustomerID
-# customer_id = 1234
-# query = f"SELECT * FROM sales WHERE CustomerID = {customer_id};"
-# sales_for_customer = pd.read_sql(query, conn)
-# print(sales_for_customer)
-
-# # Example 3: Get products with Price > 1000
-# query = "SELECT ProductName, Price FROM products WHERE Price > 1000;"
-# expensive_products = pd.read_sql(query, conn)
-# print(expensive_products)
+customers_sample = run_and_save_query("SELECT * FROM customers LIMIT 10;", "query_customers_sample.csv")
 
 conn.close()
 
 print("✅ CSV files successfully loaded into SQLite database: business_analytics.db")
+

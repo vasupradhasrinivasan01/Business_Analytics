@@ -43,3 +43,12 @@ jobs:
       - name: Run Data Analyzing Script
         run: |
           python src/data_analysis.py
+
+      - name: Upload result files
+        uses: actions/upload-artifact@v4
+        with: 
+          name: result-files
+          path: |
+            query_customers_sample.csv
+            query_sales_for_customer.csv
+            query_expensive_products.csv
