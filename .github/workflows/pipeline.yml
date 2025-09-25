@@ -39,7 +39,3 @@ jobs:
             data/generated_output/products_data.csv
             data/generated_output/sales_data.csv
             data/generated_output/customers_data.csv
-
-      - name: Run Data Extracting Script
-        run: |
-          python src/data_extract.py
