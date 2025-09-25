@@ -42,4 +42,4 @@ jobs:
 
       - name: Run Data Extracting Script
         run: |
-          python sql/data_extract.py
+          python src/data_extract.py
