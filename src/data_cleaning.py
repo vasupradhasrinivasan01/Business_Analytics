@@ -1,6 +1,7 @@
 import pandas as pd
+import os
 
-df1 = pd.read_csv(r"C:\Users\vasup\Business_Analytics\data\raw_Data\customers_raw_data.csv")
+df1 = pd.read_csv(r"data/raw_Data/customers_raw_data.csv")
 
 df1.notnull()
 df1.dropna()
@@ -14,7 +15,8 @@ df1=df1.dropna(subset='Email')
 df1=df1[~df1['Name'].str.contains(r'Jr.|Sr.', case=False,na=False)]
 # print(df1)
 
-df2 = pd.read_csv(r"C:\Users\vasup\Business_Analytics\data\raw_Data\sales_raw_data.csv")
+# Considering sales dataframe
+df2 = pd.read_csv(r"data/raw_Data/sales_raw_data.csv")
 
 df2.notnull()
 df2.dropna()
@@ -31,7 +33,7 @@ df2['Only_Time'] = df2['SaleDate'].dt.time
 # print(df2)
 
 
-df3 = pd.read_csv(r"C:\Users\vasup\Business_Analytics\data\raw_Data\products_raw_data.csv")
+df3 = pd.read_csv(r"data/raw_Data/products_raw_data.csv")
 
 df3.notnull()
 df3.dropna()
@@ -41,4 +43,7 @@ df3 = df3.dropna(subset='ProductName')
 df3 = df3[~df3['ProductName'].str.contains(r'Plus | Pro' ,case=False,na=False)]
 df3=df3.dropna(subset='Price')
 df3['Category'] = df3['Category'].fillna('Accessories')
-print(df3)
+
+df1.to_csv("data/generated_output/products_data.csv", index=False)
+df2.to_csv("data/generated_output/customers_clean_data.csv",index=False)
+df3.to_csv("data/generated_output/sales_clean_data.csv",index=False)
