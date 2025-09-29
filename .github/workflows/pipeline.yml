@@ -31,13 +31,25 @@ jobs:
         run: |
           python src/data_cleaning.py
 
-      - name: Upload output files
+      - name: Upload Product output files
         uses: actions/upload-artifact@v4
         with:
           name: output-files
           path: |
             data/generated_output/products_data.csv
+      
+      - name: Upload Sales output files
+        uses: actions/upload-artifact@v4
+        with:
+          name: output-files
+          path: |
             data/generated_output/sales_data.csv
+      
+      - name: Upload Customers output files
+        uses: actions/upload-artifact@v4
+        with:
+          name: output-files
+          path: |
             data/generated_output/customers_data.csv
       
       - name: Run Data Analyzing Script
