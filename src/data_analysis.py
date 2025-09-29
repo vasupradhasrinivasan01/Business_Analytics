@@ -22,6 +22,9 @@ sales_df.to_sql("sales", conn, if_exists="replace", index=False)
 
 conn.commit()
 
+OUTPUT_DIR = "generated_output"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
 # Function to run query and save result along with query text
 def run_and_save_query(query, question, filename):
     df = pd.read_sql(query, conn)
