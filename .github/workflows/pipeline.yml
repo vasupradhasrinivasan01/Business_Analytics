@@ -56,6 +56,4 @@ jobs:
         with: 
           name: result-files
           path: |
-            query_customers_sample.csv
-            query_sales_for_customer.csv
-            query_expensive_products.csv
+            Query_Results.csv
