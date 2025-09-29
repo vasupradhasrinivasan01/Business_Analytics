@@ -1,5 +1,6 @@
 import sqlite3
 import pandas as pd
+import os
 
 # Path to your generated CSV files
 products_csv = r"/home/runner/work/Business_Analytics/Business_Analytics/data/generated_output/products_data.csv"
