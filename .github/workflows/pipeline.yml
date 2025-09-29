@@ -37,20 +37,15 @@ jobs:
           name: output-files
           path: |
             data/generated_output/products_data.csv
-      
-      - name: Upload Sales output files
-        uses: actions/upload-artifact@v4
-        with:
-          name: output-files
-          path: |
             data/generated_output/sales_data.csv
-      
-      - name: Upload Customers output files
-        uses: actions/upload-artifact@v4
-        with:
-          name: output-files
-          path: |
             data/generated_output/customers_data.csv
+          if-no-files-found: error
+
+      - name: Debug - List generated files
+        run: |
+          echo "Listing generated_output folder..."
+          ls -lh data/generated_output
+
       
       - name: Run Data Analyzing Script
         run: |
