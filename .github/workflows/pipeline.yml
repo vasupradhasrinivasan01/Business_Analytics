@@ -34,21 +34,21 @@ jobs:
       - name: Upload Product output files
         uses: actions/upload-artifact@v4
         with:
-          name: output-files
+          name: output-product-files
           path: |
             data/generated_output/products_data.csv
       
       - name: Upload Sales output files
         uses: actions/upload-artifact@v4
         with:
-          name: output-files
+          name: output-sales-files
           path: |
             data/generated_output/sales_data.csv
       
       - name: Upload Customers output files
         uses: actions/upload-artifact@v4
         with:
-          name: output-files
+          name: output-customers-files
           path: |
             data/generated_output/customers_data.csv
       
