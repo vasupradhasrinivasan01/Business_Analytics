@@ -3,8 +3,8 @@ import pandas as pd
 
 # Path to your generated CSV files
 products_csv = r"/home/runner/work/Business_Analytics/Business_Analytics/data/generated_output/products_data.csv"
-customers_csv = r"/home/runner/work/Business_Analytics/Business_Analytics/data/generated_output/customers_clean_data.csv"
-sales_csv = r"/home/runner/work/Business_Analytics/Business_Analytics/data/generated_output/sales_clean_data.csv"
+customers_csv = r"/home/runner/work/Business_Analytics/Business_Analytics/data/generated_output/customers_data.csv"
+sales_csv = r"/home/runner/work/Business_Analytics/Business_Analytics/data/generated_output/sales_data.csv"
 
 # Load CSVs into DataFrames
 products_df = pd.read_csv(products_csv)
@@ -24,7 +24,6 @@ conn.commit()
 # Function to run query and save result along with query text
 def run_and_save_query(query, question, filename):
     df = pd.read_sql(query, conn)
-    df['__Question__'] = question
     df['__Query__'] = query  # Add query text as a column (same for all rows)
     df.to_csv(filename, index=False)
     print(f"✅ Query result saved to {filename}")
