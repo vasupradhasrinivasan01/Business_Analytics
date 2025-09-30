@@ -22,20 +22,16 @@ sales_df.to_sql("sales", conn, if_exists="replace", index=False)
 
 conn.commit()
 
-OUTPUT_DIR = "data/generated_output"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-# Function to run query and save result along with query text
 def run_and_save_query(query, question, filename):
     df = pd.read_sql(query, conn)
-    with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
-        f.write(f"# Query: {query}\n")
-        df.to_csv(f, index=False)
+    df['__Question__'] = question
+    df['__Query__'] = query  # Add query text as a column (same for all rows)
+    df.to_csv(filename, index=False)
     print(f"✅ Query result saved to {filename}")
     return df
 
 # Example 1: Get first 10 customers
-customers_sample = run_and_save_query("SELECT * FROM customers LIMIT 10;", "SELECT * FROM customers LIMIT 10","Customers_Query_Results.csv")
+customers_sample = run_and_save_query("SELECT * FROM customers LIMIT 10;", "SELECT * FROM customers LIMIT 10","data/generated_output/query_customers_sample.csv")
 
 # sales_sample = run_and_save_query("SELECT * FROM sales LIMIT 10;", "SELECT * FROM sales LIMIT 10","Sales_Query_Results.csv")
 
