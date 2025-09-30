@@ -31,11 +31,11 @@ def run_and_save_query(query, question, filename):
     return df
 
 # Example 1: Get first 10 customers
-customers_sample = run_and_save_query("SELECT * FROM customers LIMIT 10;", "SELECT * FROM customers LIMIT 10","data/generated_output/query_customers_sample.csv")
+customers_sample = run_and_save_query("SELECT * FROM customers LIMIT 10;", "SELECT * FROM customers LIMIT 10","data/generated_output/Customers_Query_Results.csv")
 
-# sales_sample = run_and_save_query("SELECT * FROM sales LIMIT 10;", "SELECT * FROM sales LIMIT 10","Sales_Query_Results.csv")
+sales_sample = run_and_save_query("SELECT * FROM sales LIMIT 10;", "SELECT * FROM sales LIMIT 10","data/generated_output/Sales_Query_Results.csv")
 
-# products_sample = run_and_save_query("SELECT * FROM products LIMIT 10;", "SELECT * FROM products LIMIT 10","Products_Query_Results.csv")
+products_sample = run_and_save_query("SELECT * FROM products LIMIT 10;", "SELECT * FROM products LIMIT 10","data/generated_output/Products_Query_Results.csv")
 
 conn.close()
 
