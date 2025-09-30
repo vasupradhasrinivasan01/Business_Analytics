@@ -57,5 +57,5 @@ jobs:
           name: result-files
           path: |
             Customers_Query_Results.csv
-            Sales_Query_Results.csv
-            Products_Query_Results.csv
+            # Sales_Query_Results.csv
+            # Products_Query_Results.csv
