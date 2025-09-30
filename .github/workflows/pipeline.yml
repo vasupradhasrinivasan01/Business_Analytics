@@ -56,6 +56,6 @@ jobs:
         with: 
           name: result-files
           path: |
-            query_customers_sample.csv
+            data/generated_output/query_customers_sample.csv
             # Sales_Query_Results.csv
             # Products_Query_Results.csv
