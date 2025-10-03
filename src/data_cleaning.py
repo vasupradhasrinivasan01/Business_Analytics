@@ -44,6 +44,6 @@ df3 = df3[~df3['Name'].str.contains(r'Plus | Pro' ,case=False,na=False)]
 df3=df3.dropna(subset='Price')
 df3['Category'] = df3['Category'].fillna('Accessories')
 
-df1.to_csv("data/generated_output/products_data.csv", index=False)
-df2.to_csv("data/generated_output/customers_data.csv",index=False)
-df3.to_csv("data/generated_output/sales_data.csv",index=False)
+df1.to_csv("data/generated_output/customers_data.csv", index=False)
+df2.to_csv("data/generated_output/sales_data.csv",index=False)
+df3.to_csv("data/generated_output/products_data.csv",index=False)
