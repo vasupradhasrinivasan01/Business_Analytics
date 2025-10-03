@@ -39,8 +39,8 @@ df3.notnull()
 df3.dropna()
 
 # print(df3.columns)
-df3 = df3.dropna(subset='ProductName')
-df3 = df3[~df3['ProductName'].str.contains(r'Plus | Pro' ,case=False,na=False)]
+df3 = df3.dropna(subset='Name')
+df3 = df3[~df3['Name'].str.contains(r'Plus | Pro' ,case=False,na=False)]
 df3=df3.dropna(subset='Price')
 df3['Category'] = df3['Category'].fillna('Accessories')
 
