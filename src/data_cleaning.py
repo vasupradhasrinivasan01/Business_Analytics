@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 
+# Considering customers dataframe
 df1 = pd.read_csv(r"data/raw_Data/customers_raw_data.csv")
 
 df1.notnull()
@@ -32,7 +33,7 @@ df2['Only_Date'] = df2['SaleDate'].dt.year.astype(str) + "-" + df2['SaleDate'].d
 df2['Only_Time'] = df2['SaleDate'].dt.time
 # print(df2)
 
-
+# Considering products dataframe
 df3 = pd.read_csv(r"data/raw_Data/products_raw_data.csv")
 
 df3.notnull()
