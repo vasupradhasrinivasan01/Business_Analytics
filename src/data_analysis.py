@@ -30,12 +30,17 @@ def run_and_save_query(query, question, filename):
     print(f"✅ Query result saved to {filename}")
     return df
 
-# Example 1: Get first 10 customers
-customers_sample = run_and_save_query("SELECT * FROM customers LIMIT 10;", "SELECT * FROM customers LIMIT 10","data/generated_output/Customers_Query_Results.csv")
+# Get Sample Customers Data
+customers_sample = run_and_save_query("SELECT * FROM customers LIMIT 10;", "Customers Sample Data","data/generated_output/Customers_Sample_Data.csv")
 
-sales_sample = run_and_save_query("SELECT * FROM sales LIMIT 10;", "SELECT * FROM sales LIMIT 10","data/generated_output/Sales_Query_Results.csv")
+# Get Customers from Unknown Region
+customers_from_unknown = run_and_save_query("SELECT * FROM customers WHERE Region = 'Unknown';", "Customers from Unknown Region", "data/generated_output/Customers_Unknown_Region.csv")
 
-products_sample = run_and_save_query("SELECT * FROM products LIMIT 10;", "SELECT * FROM products LIMIT 10","data/generated_output/Products_Query_Results.csv")
+# Get Sample Sales Data
+sales_sample = run_and_save_query("SELECT * FROM sales LIMIT 10;", "SELECT * FROM sales LIMIT 10","data/generated_output/Sales_Sample_Data.csv")
+
+# Get Sample Products Data
+products_sample = run_and_save_query("SELECT * FROM products LIMIT 10;", "SELECT * FROM products LIMIT 10","data/generated_output/Products_Sample_Data.csv")
 
 conn.close()
 
