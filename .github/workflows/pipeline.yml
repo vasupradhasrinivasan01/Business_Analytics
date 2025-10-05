@@ -56,8 +56,9 @@ jobs:
         with: 
           name: result-files
           path: |
-            data/generated_output/Customers_Query_Results.csv
-            data/generated_output/Sales_Query_Results.csv
-            data/generated_output/Products_Query_Results.csv
+            data/generated_output/Customers_Sample_Data.csv
+            data/generated_output/Sales_Sample_Data.csv
+            data/generated_output/Products_Sample_Data.csv
+            data/generated_output/Customers_Unknown_Region.csv
           if-no-files-found: error
 
