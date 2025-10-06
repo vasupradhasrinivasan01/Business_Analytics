@@ -40,7 +40,7 @@ customers_from_unknown = run_and_save_query("SELECT * FROM customers WHERE Regio
 sales_sample = run_and_save_query("SELECT * FROM sales LIMIT 10;", "SELECT * FROM sales LIMIT 10","data/generated_output/Sales_Sample_Data.csv")
 
 # Get Valuable Feedbacks
-sales_feedback = run_and_save_query("SELECT * FROM sales WHERE FEEDBACK = 5;", "Sales Valuable Feedback","data/generated_output/Sales_Feedback_Data.csv")
+sales_feedback = run_and_save_query("SELECT * FROM sales WHERE FEEDBACKSCORE = 5;", "Sales Valuable Feedback","data/generated_output/Sales_Feedback_Data.csv")
 
 # Get Sample Products Data
 products_sample = run_and_save_query("SELECT * FROM products LIMIT 10;", "SELECT * FROM products LIMIT 10","data/generated_output/Products_Sample_Data.csv")
