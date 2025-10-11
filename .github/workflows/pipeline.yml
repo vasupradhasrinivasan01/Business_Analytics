@@ -61,7 +61,7 @@ jobs:
             data/generated_output/Products_Sample_Data.csv
             data/generated_output/Customers_Unknown_Region.csv
             data/generated_output/Sales_Feedback_Data.csv
-            data/generated_output/Zero_Sales.csv
+            data/generated_output/Zero_Sale.csv
             data/generated_output/Sales_Null_Feedback_Data.csv
             data/generated_output/Products_Accessories_Data.csv
           if-no-files-found: error
