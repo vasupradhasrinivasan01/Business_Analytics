@@ -42,6 +42,9 @@ sales_sample = run_and_save_query("SELECT * FROM sales LIMIT 10;", "SELECT * FRO
 # Get Valuable Feedbacks
 sales_feedback = run_and_save_query("SELECT * FROM sales WHERE FEEDBACKSCORE = 5;", "Sales Valuable Feedback","data/generated_output/Sales_Feedback_Data.csv")
 
+# Get Zero Quantity Feedbacks
+zero_sales = run_and_save_query("SELECT * FROM sales WHERE QUANTITY = 0;", "Zero Quantity Sales","data/generated_output/Zero_Sales.csv")
+
 # Get Nullable Feedbacks
 sales_feedback = run_and_save_query("SELECT * FROM sales WHERE FEEDBACKSCORE IS NULL;", "Sales Nullable Feedback","data/generated_output/Sales_Null_Feedback_Data.csv")
 
